@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [outputText, setOutputText] = useState("Texto inicial")
+  const [contador, setContador] = useState(0)
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <Button title="Alterar texto"/>
+      <Text>{outputText}</Text>
+      <Button title="Alterar texto" onPress={() => setOutputText("Texto novo")}/>
+      
     </View>
   );
 }
