@@ -9,7 +9,8 @@ export default function App() {
       <Text>Open up App.js to start working on your app!</Text>
       <Text>{outputText}</Text>
       <Button title="Alterar texto" onPress={() => setOutputText("Texto novo")}/>
-      
+      <Text>{contador}</Text>
+      <Button title="Alterar texto" onPress={() => setContador(contador + 1)} />
     </View>
   );
 }
